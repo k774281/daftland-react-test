@@ -1,0 +1,12 @@
+@import "../styles/variables";
+@import "../styles/mixins";
+
+.review-card {
+  display:flex;
+  gap:12px;
+  background: rgba(0,0,0,0.45);
+  padding:12px;
+  border-radius:10px;
+  .avatar{ width:46px; height:46px; border-radius:50%; background:$color-primary; display:flex; align-items:center; justify-content:center; font-weight:700; }
+  .body { p{ color:$color-muted; margin:6px 0 0; } .stars{ color:gold; margin-left:8px; } }
+}

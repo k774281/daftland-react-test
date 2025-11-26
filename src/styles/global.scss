@@ -1,0 +1,12 @@
+@import 'variables';
+@import 'theme';
+@import 'variables';
+body { background: $color-bg; color: $color-light; }
+body::after {
+  content:'';
+  position:fixed;
+  inset:0;
+  pointer-events:none;
+  background:url('data:image/png;base64,iVBORw0KGgoAAAANSUhEUgAAAAEAAAABCAYAAAAfFcSJAAAADUlEQVQIW2NkYGD4DwABAgEAffNkTQAAAABJRU5ErkJggg=='), radial-gradient(circle at center, rgba(255,255,255,0.2) 0%, transparent 80%);
+  opacity:0.05;
+}

@@ -1,0 +1,93 @@
+@import '../styles/variables';
+@import '../styles/mixins';
+
+.hero {
+  position: relative;
+  height: 90vh;
+  overflow: hidden;
+
+  .hero-swiper { height: 100%; }
+
+  .slide-wrap { position: relative; height: 100%; }
+
+  .hero-bg {
+    position: absolute;
+    inset: 0;
+    background-size: cover;
+    background-position: center;
+    transform-origin: center;
+    filter: saturate(1.1) contrast(1.05);
+    will-change: transform;
+  }
+
+  .hero-overlay {
+    position: absolute;
+    inset: 0;
+    background: linear-gradient(180deg, rgba(10,10,15,0.6), rgba(10,10,15,0.85));
+    mix-blend-mode: multiply;
+    z-index: 1;
+  }
+
+  .hero-content {
+    position: absolute;
+    z-index: 3;
+    top: 50%;
+    left: 50%;
+    transform: translate(-50%, -50%);
+    text-align: center;
+    color: $color-light;
+    width: 90%;
+    max-width: 800px;
+    .kicker { 
+      color: $neon-pink; 
+      letter-spacing: 2px; 
+      font-weight: $font-weight-bold; 
+      margin-bottom: 8px; 
+    }
+    .headline { 
+      font-family: 'Orbitron', sans-serif; 
+      font-size: $font-size-3xl; 
+      color: $neon-purple; 
+      text-shadow: 0 6px 30px rgba(181,30,231,0.18); 
+      margin: 0 0 12px; 
+    }
+    .sub { opacity: 0.85; color: $color-light; margin-bottom: 18px; }
+    .btn-primary { 
+      @include neon-button($neon-blue, $radius-lg); 
+    }
+  }
+
+  /* ======== Thumbnail Pagination ======== */
+  .swiper-pagination {
+    display: flex;
+    justify-content: center;
+    gap: 10px;
+    bottom: 20px !important;
+  }
+
+  .swiper-pagination-bullet {
+    width: 120px;
+    height: 80px;
+    border-radius: 6px;
+    overflow: hidden;
+    opacity: 0.5;
+    border: 2px solid rgba(255,255,255,0.3);
+    transition: 0.25s ease;
+    background: none !important;
+    padding: 0;
+
+    img {
+      width: 100%;
+      height: 100%;
+      object-fit: cover;
+      display: block;
+    }
+  }
+
+  .swiper-pagination-bullet-active {
+    opacity: 1;
+    border-color: #7a5cff;
+    transform: scale(1.1);
+    box-shadow: 0 0 12px rgba(122,92,255,0.6);
+  }
+}

@@ -1,0 +1,3 @@
+@import "../styles/variables";
+@import "../styles/mixins";
+.drink-tabs{display:flex;gap:1.2rem;overflow:auto;padding:0.8rem 0;}.tab{background:transparent;border:none;color:$color-light;padding:0.8rem 1.2rem;border-radius:1rem;font-size:1.4rem}.tab.active{color:$neon-blue}

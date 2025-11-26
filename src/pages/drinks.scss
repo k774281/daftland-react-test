@@ -1,0 +1,21 @@
+@import "../styles/variables";
+@import "../styles/mixins";
+
+/* mobile-first: assume html font-size set to 62.5% (1rem = 1.0rem) */
+.drinks-page {
+  .section-filter { padding: 2.4rem 0; }
+  .section-list { padding: 4.8rem 0; }
+
+  .drink-tabs { display:flex; gap:1.2rem; overflow:auto; padding:0.8rem 0; margin-bottom:1.6rem;
+    .tab { background:transparent; border:none; padding:0.8rem 1.2rem; border-radius:1rem; color:$color-light; font-size:1.4rem; white-space:nowrap;
+      &.active { box-shadow: 0 0 1.2rem rgba(30,144,255,0.12); color:$neon-blue; }
+    }
+  }
+
+  .drink-grid {
+    display:grid;
+    grid-template-columns: 1fr;
+    gap:1.6rem;
+  }
+
+  .hero-drinks { height: 38rem; position:relative; }}

@@ -1,0 +1,50 @@
+@import 'variables';
+
+@mixin respond-lg { @media (max-width: $break-lg) { @content; } }
+@mixin respond-md { @media (max-width: $break-md) { @content; } }
+@mixin respond-sm { @media (max-width: $break-sm) { @content; } }
+
+.container {
+  max-width: 1200px;
+  margin: 0 auto;
+  padding: 0 1.5rem;
+  @include respond-md { width: calc(100% - 48px); }
+}
+@mixin container {
+  width: 100%;
+  max-width: 1200px;
+  margin: 0 auto;
+  padding: 0 1.5rem;
+}
+
+/* ============================
+    Neon Primary Button Mixin
+   ============================ */
+
+@mixin neon-button($color: $neon-blue, $radius: $radius-lg) {
+  padding: $space-sm $space-lg;
+  border-radius: $radius;
+  border: 1px solid rgba($color, 0.35);
+  background: transparent;
+  color: $color;
+  transition: $transition-medium;
+  cursor: pointer;
+  &:hover {
+    box-shadow: 0 0 18px rgba($color, 0.45);
+    transform: translateY(-3px);
+  }
+}
+
+@mixin view-button($color: $neon-pink, $radius: $radius-md) {
+  padding: $space-sm $space-lg;
+  border-radius: $radius;
+  border: 1px solid rgba($color, 0.35);
+  background: $color;
+  color: $color-light;
+  transition: $transition-medium;
+  cursor: pointer;
+  &:hover {
+    box-shadow: 0 0 18px rgba($color, 0.45);
+    transform: translateY(-3px);
+  }
+}

@@ -1,0 +1,5 @@
+@import "../styles/mixins";@import "../styles/variables";
+@import "../styles/mixins";
+
+
+.contact-block { padding:40px 0; .contacts-grid { display:flex; gap:18px; @include respond-sm{ flex-direction:column; } .contact-item{ background: rgba(255,255,255,0.03); padding:16px; border-radius:8px; } } }

@@ -1,0 +1,18 @@
+
+@import './variables';
+
+@mixin glass {
+  background: rgba(255,255,255,0.04);
+  backdrop-filter: blur(10px);
+  border: 1px solid rgba(255,255,255,0.08);
+}
+
+@mixin neon-border {
+  border: 1px solid rgba(30,144,255,0.35);
+  box-shadow: 0 0 12px rgba(30,144,255,0.25);
+}
+
+@mixin neon-text {
+  color: $neon-purple;
+  text-shadow: 0 0 10px rgba(181,30,231,0.35);
+}

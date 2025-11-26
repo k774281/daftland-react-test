@@ -1,0 +1,4 @@
+@import "../styles/variables";
+@import "../styles/mixins";
+
+.drink-modal-backdrop{position:fixed;inset:0;display:flex;align-items:center;justify-content:center;background:rgba(0,0,0,0.6);} .drink-modal{background:$color-bg;padding:1.6rem;border-radius:1rem;max-width:90rem;width:90%;} .modal-close{position:absolute;right:1.2rem;top:1.2rem}

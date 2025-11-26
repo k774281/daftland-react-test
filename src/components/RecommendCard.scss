@@ -1,0 +1,12 @@
+@import "../styles/variables";
+@import "../styles/mixins";
+
+.recommend-card {
+  background: rgba(255,255,255,0.03);
+  padding:16px;
+  border-radius:$radius-sm;
+  text-align:center;
+  .icon{ font-size:28px; margin-bottom:8px; }
+  h4{ margin:6px 0; }
+  p{ color:$color-muted; font-size:13px; }
+}

@@ -1,0 +1,67 @@
+@import '../styles/variables.scss';
+@import '../styles/mixins.scss';
+
+.product-swiper {
+  width: 100%;
+  padding: $space-md 0;
+
+  .slide-content {
+    text-align: center;
+    color: #fff;
+    padding: $space-md;
+
+    h2 {
+      font-size: $font-size-xl;
+      margin-bottom: $space-sm;
+    }
+
+    p {
+      width: 85%;
+      margin: 0 auto $space-md;
+      line-height: 1.6;
+      opacity: 0.85;
+      font-size: $font-size-sm;
+    }
+
+    img {
+      width: 220px;
+      margin: 0 auto;
+      filter: drop-shadow(0 0 22px #9e40ff);
+    }
+  }
+
+  /* 分頁點 dot */
+  .swiper-pagination-bullet {
+    background: #fff !important;
+    opacity: 0.7;
+  }
+
+  .swiper-pagination-bullet-active {
+    background: #9e40ff !important;
+    opacity: 1;
+  }
+}
+
+/* Tablet */
+@mixin respond-md { @media (max-width: $break-md) and (min-width: $break-sm) { 
+    .product-swiper .slide-content img {
+      width: 260px;
+    } 
+  }
+}
+
+/* Desktop */
+@media (min-width: 1025px) {
+  .product-swiper .slide-content h2 {
+    font-size: 2.4rem;
+  }
+
+  .product-swiper .slide-content p {
+    width: 60%;
+    font-size: 1.1rem;
+  }
+
+  .product-swiper .slide-content img {
+    width: 300px;
+  }
+}

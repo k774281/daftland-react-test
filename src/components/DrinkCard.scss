@@ -1,0 +1,15 @@
+@import "../styles/variables";
+@import "../styles/mixins";
+
+.drink-card {
+  background: rgba(255,255,255,0.03);
+  border-radius: $radius-sm;
+  overflow:hidden;
+  box-shadow: 0 6px 18px rgba(0,0,0,0.6);
+  .thumb img { width:100%; height:180px; object-fit:cover; display:block; }
+  .meta { padding:16px;
+    h4{ margin:0 0 8px; }
+    p{ color:$color-muted; font-size:14px; margin:0 0 12px; }
+    .btn-sm{ @include view-button($neon-pink, $radius-md)}
+  }
+}

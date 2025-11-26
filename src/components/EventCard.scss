@@ -1,0 +1,9 @@
+@import "../styles/variables";
+@import "../styles/mixins";
+
+.event-card {
+  border-radius: $radius-sm;
+  overflow:hidden;
+  img{ width:100%; height:140px; object-fit:cover; display:block; }
+  .info{ padding:10px; background: rgba(0,0,0,0.45); h4{ margin:0; } .date{ color:$color-muted; font-size:13px; } }
+}
